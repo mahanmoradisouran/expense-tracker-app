@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "../Inputs/Input";
 import NavBar from "../Navbar/Navbar";
 import Select from "../Inputs/Select";
@@ -36,13 +36,16 @@ const banks = [
   { name: "مشترک ایران و ونزولا", icon: "ivbb" },
 ];
 
-
 const AddAcountModal = ({ setShowModal, animation, styles }) => {
+  
   const [cardName, setCardName] = useState("");
-  const [bankName, setBankName] = useState("");
+  const [bankName, setBankName] = useState("-Select bank-");
   const [showCompletePage, setShowCompletePage] = useState(false);
+  const [selected, setSelected] = useState(banks[0]);
 
- 
+  useEffect(() => {
+    setBankName(selected.name);
+  }, [selected]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -86,7 +89,7 @@ const AddAcountModal = ({ setShowModal, animation, styles }) => {
               className="w-full h-full flex flex-col items-center"
             >
               <Input value={cardName} changeEvent={setCardName} />
-              <Select banks={banks} setBankName={setBankName} />
+              <Select banks={banks} setBankName={setBankName} selected={selected} setSelected={setSelected}/>
               <button
                 type="submit"
                 onClick={submitHandler}

@@ -2,7 +2,7 @@ import { LineChart, Line, Tooltip, YAxis, XAxis } from "recharts";
 
 const BalanceChart = () => {
 
-  const width = window.innerWidth;
+  let width = window.innerWidth;
 
   const data = [
     { name: "Sun", bal: 400, inc: 2400, exp: 2400 },
@@ -17,7 +17,7 @@ const BalanceChart = () => {
   return (
     <>
       <LineChart
-        width={width }
+        width={width - 1}
         height={300}
         data={data}
         margin={{ top: 0, left: -40, right: 20, bottom: 0 }}

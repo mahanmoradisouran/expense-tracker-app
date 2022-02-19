@@ -1,0 +1,5 @@
+.card {
+    background-image: url("./assets/images/Card.svg");
+    background-size: cover;
+    background-position: center center;
+}

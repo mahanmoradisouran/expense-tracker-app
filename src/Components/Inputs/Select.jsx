@@ -1,16 +1,8 @@
-import { useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import "iransbankicon";
-import { useEffect } from "react";
 
-export default function Select({ banks, setBankName }) {
-  const [selected, setSelected] = useState(banks[0]);
-
-  useEffect(() => {
-    setBankName(selected.name);
-  }, [selected]);
-
+export default function Select({ banks, selected , setSelected }) {
   return (
     <div className="md:w-[720px] w-full z-40">
       <Listbox value={selected} onChange={setSelected}>

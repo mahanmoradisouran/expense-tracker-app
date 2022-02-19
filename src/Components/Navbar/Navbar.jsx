@@ -1,13 +1,15 @@
 import * as React from "react";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-const NavBar = ({ label , event , styles}) => {
-
+const NavBar = ({ label, event, styles }) => {
   return (
-    <header className={`w-full fixed align-middle top-0 p-5 ${styles}`}>
+    <div className={`w-full fixed align-middle top-0 p-5 ${styles}`}>
       <div className="absolute left-5">
-        <IconButton onClick={event} color="inherit" aria-label="menu" style={{ padding: 0 }}>
+        <IconButton
+          onClick={event}
+          color="inherit"
+          aria-label="menu"
+          style={{ padding: 0 }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-7 w-7 p-0"
@@ -27,7 +29,7 @@ const NavBar = ({ label , event , styles}) => {
       <h2 className="md:text-xl text-s inline-block font-semiBold text-center">
         {label}
       </h2>
-    </header>
+    </div>
   );
 };
 
