@@ -16,7 +16,7 @@ const ExpenseTrackerApp = () => {
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const [notification, setNotification] = useState([]);
-  const [tradeTypes, setTradeTypes] = useState([
+  const [tradeTypes] = useState([
     "restaurant",
     "taxation",
     "car",

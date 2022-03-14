@@ -1,37 +1,6 @@
 import { useState } from "react";
 import EditeInformationForm from "../EditeInformationForm/EditeInformationForm";
 
-const banks = [
-  { name: "صادرات ایران", icon: "bsi" },
-  { name: "ملت", icon: "mellat" },
-  { name: "تجارت", icon: "tejarat" },
-  { name: "ملی ایران", icon: "bmi" },
-  { name: "سپه", icon: "sepah" },
-  { name: "کشاورزی", icon: "bki" },
-  { name: "پارسیان", icon: "parsian" },
-  { name: "مسکن", icon: "maskan" },
-  { name: "رفاه کارگران", icon: "rb" },
-  { name: "اقتصادنوین", icon: "en" },
-  { name: "انصار", icon: "ansar" },
-  { name: "پاسارگاد", icon: "bpi" },
-  { name: "سامان", icon: "sb" },
-  { name: "سینا", icon: "sina" },
-  { name: "پست بانک ایران", icon: "post" },
-  { name: "قوامین", icon: "ghbi" },
-  { name: "توسعه تعاون", icon: "tt" },
-  { name: "شهر", icon: "shahr" },
-  { name: "آینده", icon: "ba" },
-  { name: "سرمایه", icon: "sarmayeh" },
-  { name: "دی", icon: "day" },
-  { name: "حکمت ایرانیان", icon: "hi" },
-  { name: "ایران زمین", icon: "iz" },
-  { name: "کار آفرین", icon: "kar" },
-  { name: "گردشگری", icon: "tourism" },
-  { name: "صنعت و معدن", icon: "bim" },
-  { name: "توسعه صادرات ایران", icon: "edbi" },
-  { name: "خاورمیانه", icon: "me" },
-  { name: "مشترک ایران و ونزولا", icon: "ivbb" },
-];
 
 const Profile = () => {
   const [showEditeForm, setShowEditeForm] = useState(false);

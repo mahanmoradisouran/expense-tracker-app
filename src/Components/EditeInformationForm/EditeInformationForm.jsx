@@ -43,9 +43,7 @@ const EditeInformationForm = ({ setShowEditeForm }) => {
   const [name, setName] = useState(Name);
   const [account, setAccount] = useState(Account);
 
-  const [cardName, setCardName] = useState("");
   const [bankName, setBankName] = useState("-Select bank-");
-  const [showCompletePage, setShowCompletePage] = useState(false);
   const [selected, setSelected] = useState(
     banks.find((bank) => bank.name === Bank)
   );
@@ -55,7 +53,7 @@ const EditeInformationForm = ({ setShowEditeForm }) => {
     localStorage.setItem("name", name);
     localStorage.setItem(
       "bankInformation",
-      JSON.stringify({ cardName: account, bankName: selected.name })
+      JSON.stringify({ cardName: account, bankName: bankName })
     );
     setShowEditeForm(false);
   };

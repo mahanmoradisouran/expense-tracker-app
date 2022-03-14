@@ -45,8 +45,8 @@ const Home = ({ incoms, expenses, notifications, trades }) => {
   });
 
   // destructuring props obj
-  const { income, setIncome } = incoms;
-  const { expense, setExpense } = expenses;
+  const { income } = incoms;
+  const { expense } = expenses;
   const notification = notifications.notification;
   const setNotification = notifications.setNotification;
 

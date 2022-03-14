@@ -136,8 +136,11 @@ const Trade = ({ trade }) => {
         return icons.shoppingbag;
       case "":
         return icons.inc;
+      default:
+        break;
     }
   };
+
   const data = showIcon();
 
   return (

@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import Income from "../Income/Income";
 import Expense from "../Expense/Expense";
-import { Trades } from "../ExpenseTrackerApp/ExpenseTrackerApp";
 
 const Add = () => {
   const [transactionPage, setTransactionPage] = useState("");
 
   useEffect(() => {
-    showTransaction()
-  }, [transactionPage])
-  
+    showTransaction();
+  }, [transactionPage, showTransaction]);
 
   const showTransaction = () => {
     if (transactionPage === "Expense") {
-      return <Expense setTransactionPage={setTransactionPage}/>;
+      return <Expense setTransactionPage={setTransactionPage} />;
     } else if (transactionPage === "Add") {
-      return <Income setTransactionPage={setTransactionPage}/>;
+      return <Income setTransactionPage={setTransactionPage} />;
     } else return null;
   };
 
