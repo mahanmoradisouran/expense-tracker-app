@@ -106,6 +106,10 @@ const BottomNav = () => {
     content.dispatch(newValue);
   };
 
+  React.useEffect(()=>{
+    setValue(content.state)
+  },[content])
+
   return (
     <>
       <BottomNavigation

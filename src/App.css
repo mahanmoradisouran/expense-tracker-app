@@ -3,3 +3,7 @@
     background-size: cover;
     background-position: center center;
 }
+
+.animated {
+    transform: translateY(100);
+}

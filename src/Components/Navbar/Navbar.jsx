@@ -26,7 +26,7 @@ const NavBar = ({ label, event, styles }) => {
           </svg>
         </IconButton>
       </div>
-      <h2 className="md:text-xl text-s inline-block font-semiBold text-center">
+      <h2 className="md:text-xl text-s inline-block font-semiBold text-center w-full">
         {label}
       </h2>
     </div>

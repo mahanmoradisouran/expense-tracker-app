@@ -35,7 +35,7 @@ const GetNameForm = ({ setSlide }) => {
           Please enter your name to continue and better user experience. This
           name will be set as your profile id.
         </p>
-        <Input value={name} changeEvent={setName} />
+        <Input value={name} changeEvent={setName} placeholder="Your name"/>
         <button
           type="submit"
           onClick={submitHandler}

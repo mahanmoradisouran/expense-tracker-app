@@ -78,7 +78,7 @@ const AddAcountModal = ({ setShowModal, animation, styles }) => {
         <div className="w-full h-1/2 absolute bottom-0">
           <div className="h-full w-full pl-3 flex flex-col items-start leading-[50px]">
             <h3 className="text-s text-Violet-20 ml-2">Balance</h3>
-            <h1 className="text-8xl text-Light-100 h-160">$00.0</h1>
+            <h1 className="text-5xl text-Light-100 h-160">$00.0</h1>
           </div>
           <div
             className={`transition-all duration-700 w-full rounded-[40px] bg-Light-100 absolute -bottom-20 pt-5 px-4 h-[300px]`}
@@ -88,7 +88,7 @@ const AddAcountModal = ({ setShowModal, animation, styles }) => {
               autoComplete="off"
               className="w-full h-full flex flex-col items-center"
             >
-              <Input value={cardName} changeEvent={setCardName} />
+              <Input value={cardName} changeEvent={setCardName} placeholder="Your account name"/>
               <Select banks={banks} setBankName={setBankName} selected={selected} setSelected={setSelected}/>
               <button
                 type="submit"
