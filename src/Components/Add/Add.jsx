@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Income from "../Income/Income";
 import Expense from "../Expense/Expense";
 
 const Add = () => {
   const [transactionPage, setTransactionPage] = useState("");
-
-  useEffect(() => {
-    showTransaction();
-  }, [transactionPage, showTransaction]);
 
   const showTransaction = () => {
     if (transactionPage === "Expense") {
