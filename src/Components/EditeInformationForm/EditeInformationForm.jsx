@@ -43,17 +43,19 @@ const EditeInformationForm = ({ setShowEditeForm }) => {
   const [name, setName] = useState(Name);
   const [account, setAccount] = useState(Account);
 
-  const [bankName, setBankName] = useState("-Select bank-");
+  const [setBankName] = useState("-Select bank-");
   const [selected, setSelected] = useState(
-    banks.find((bank) => bank.name === Bank)
+    banks.filter((bank) => bank.name === Bank)[0]
   );
+
+  console.log(selected);
 
   const submitHandler = (event) => {
     event.preventDefault();
     localStorage.setItem("name", name);
     localStorage.setItem(
       "bankInformation",
-      JSON.stringify({ cardName: account, bankName: bankName })
+      JSON.stringify({ cardName: account, bankName: selected.name })
     );
     setShowEditeForm(false);
   };
@@ -61,7 +63,7 @@ const EditeInformationForm = ({ setShowEditeForm }) => {
   const addStyles = () => {
     if (name || account) {
       if ((name !== "") & (account !== "")) {
-        if (name !== Name || account !== Account || selected.name !== Bank) {
+        if (name !== Name || account !== Account || selected !== Bank) {
           return "bg-Violet-100 text-Light-100";
         } else return "bg-Light-20 text-Dark-75 pointer-events-none";
       } else return "bg-Light-20 text-Dark-75 pointer-events-none";

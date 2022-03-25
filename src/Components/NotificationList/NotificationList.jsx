@@ -15,7 +15,7 @@ const NotificationList = ({
       />
       <div className="w-full flex h-full flex-col px-4 pt-5 items-center overflow-y-scroll">
         {notification.length > 0 ? (
-          notification.map((n) => <Notification data={n} key={1} />)
+          notification.map((n) => <Notification data={n} key={n.time} />)
         ) : (
           <div className="flex justify-center items-center flex-col h-full w-full">
             <p className="text-sm text-Dark-75">

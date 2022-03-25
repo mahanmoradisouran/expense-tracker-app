@@ -41,7 +41,7 @@ const Transactions = ({
               </p>
             ) : (
               trades.trades.map((trade) => (
-                <Trade key={trade.time} trade={trade} />
+                <Trade key={trade.time} trade={trade} setOpenTransactionsList={setOpenTransactionsList} />
               ))
             )}
           </div>

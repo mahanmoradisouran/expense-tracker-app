@@ -5,7 +5,6 @@ import Profile from "../Profile/Profile";
 import Income from "../Income/Income";
 import Expense from "../Expense/Expense";
 import Transactions from "../Transactions/Transactions";
-import Budget from "../Budget/Budget";
 import BottomNav from "../BottomNav/BottomNav";
 import Add from "../Add/Add";
 
@@ -46,8 +45,6 @@ const ExpenseTrackerApp = () => {
       case "Income":
         return <Income />;
       // Add pages <==
-      case "Budget":
-        return <Budget />;
       case "Profile":
         return <Profile />;
       default:

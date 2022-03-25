@@ -71,6 +71,8 @@ const Home = ({ incoms, expenses, notifications, trades }) => {
     setShowNotification({ ...showNotification, show: true });
   };
 
+  // console.log(banks.filter((bank) => bank.name === bankCard.bankName) , bankCard.bankName);
+
   return (
     <div className="w-full h-full">
       <div className="relative w-11/12 h-1/2 mx-auto">
@@ -128,7 +130,6 @@ const Home = ({ incoms, expenses, notifications, trades }) => {
                 <i
                   className={`bank64 rounded-full scale-[0.7] ${
                     banks.filter((bank) => bank.name === bankCard.bankName)[0]
-                      .icon
                   }`}
                 ></i>
               </div>

@@ -2,7 +2,9 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import "iransbankicon";
 
-export default function Select({ banks, selected , setSelected }) {
+export default function Select({ banks, selected, setSelected }) {
+  console.log(selected);
+
   return (
     <div className="md:w-[720px] w-full z-40">
       <Listbox value={selected} onChange={setSelected}>
